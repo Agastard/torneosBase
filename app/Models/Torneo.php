@@ -16,6 +16,8 @@ class Torneo extends Model
         'fecha_fin',
         'ubicacion',
         'descripcion',
+        'tipo_torneo_id',
+        'fecha_torneo'
     ];
     protected $casts = [
         'fecha_inicio' => 'datetime',

@@ -20,8 +20,8 @@ class DatabaseSeeder extends Seeder
             'email' => 'test@example.com',
         ]); */
         $this->call([
-            //TipoTorneoSeed::class,
-            TorneoSeed::class,
+            TipoTorneoSeed::class,
+            //TorneoSeed::class,
             // Aquí puedes agregar más seeders si es necesario
         ]);
 
