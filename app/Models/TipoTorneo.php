@@ -17,4 +17,9 @@ class TipoTorneo extends Model
         'updated_at' => 'datetime',
     ];
     protected $guarded = ['id']; // Asegura que el campo 'id' no sea asignable masivamente
+
+    public function torneos()
+    {
+        return $this->hasMany(Torneo::class, 'tipo_torneo_id', 'id');
+    }
 }

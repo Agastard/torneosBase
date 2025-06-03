@@ -25,7 +25,7 @@ class TorneoRequest extends FormRequest
             'nombre' => 'required|string|max:255',
             'descripcion' => 'nullable|string',
             'fecha_torneo' => 'required|date',
-            'ubicacion' => 'nullable|string|max:255',
+            'ubicacion' => 'required|string|max:255',
             'tipo_torneo_id' => 'required|exists:tipostorneos,id',
         ];
     }

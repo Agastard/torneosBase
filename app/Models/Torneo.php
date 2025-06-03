@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+//use App\Models\TipoTorneo;
 
 class Torneo extends Model
 {
@@ -24,5 +25,10 @@ class Torneo extends Model
         'fecha_fin' => 'datetime',
     ];
     protected $guarded = ['id']; // Asegura que el campo 'id' no sea asignable masivamente
+
+    public function getTipo()
+    {
+        return $this->hasOne(TipoTorneo::class, 'id', 'tipo_torneo_id');
+    }
 
 }
