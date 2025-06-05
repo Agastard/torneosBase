@@ -17,6 +17,8 @@ class Torneo extends Model
         'fecha_fin',
         'ubicacion',
         'descripcion',
+        'n_mesas',
+        'n_participantes_x_mesa',
         'tipo_torneo_id',
         'fecha_torneo'
     ];

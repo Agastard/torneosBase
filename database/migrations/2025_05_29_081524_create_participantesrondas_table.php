@@ -17,9 +17,10 @@ return new class extends Migration
                 ->constrained('participantes')
                 ->onDelete('cascade');
             $table->foreignId('ronda_id')
-                ->constrained('rondastorneos')
+                ->constrained('rondas')
                 ->onDelete('cascade');
             $table->integer('puntos')->default(0);
+            $table->integer('mesa');
             $table->timestamps();
         });
     }

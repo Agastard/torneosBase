@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('nombre', 100);
             $table->string('descripcion', 255)->nullable();
             $table->string('ubicacion', 255)->nullable();
+            $table->integer('n_mesas')->default(0);
+            $table->integer('n_participantes_x_mesa')->default(0);
 
             $table->timestamps();
         });

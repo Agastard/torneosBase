@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Ronda;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,17 +14,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
 
-        /* User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]); */
         $this->call([
             TipoTorneoSeed::class,
-            //TorneoSeed::class,
-            // Aquí puedes agregar más seeders si es necesario
+            TorneoSeed::class,
+            ParticipanteSeeder::class,
+            RondaSeeder::class,
+            ParticipanteTorneoSeeder::class,
+            ParticipanteRondaSeeder::class,
         ]);
-
     }
 }
